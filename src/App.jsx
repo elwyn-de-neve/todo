@@ -1,4 +1,4 @@
-import '../../../../todo/src/App.css';
+import './App.css';
 import {useState} from "react";
 import {ArrowDown, ArrowUp, FlagPennant, Trash} from "@phosphor-icons/react";
 import {v4 as id} from 'uuid';
