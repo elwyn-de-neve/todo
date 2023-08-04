@@ -56,7 +56,7 @@ function App() {
             id: id(),
             title: inputValue,
             completed: completed,
-            priority: parseInt(priority),
+            priority: priority,
         }]);
         setInputValue(""); // Clear the input
         setPriority(3); // Set the priority back to default
