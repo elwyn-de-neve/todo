@@ -4,34 +4,34 @@ import {ArrowDown, ArrowUp, FlagPennant, Trash} from "@phosphor-icons/react";
 import {v4 as id} from 'uuid';
 
 const tasks = [
-    {
-        id: id(),
-        title: 'Learn HTML',
-        completed: false,
-        description: 'Learn HTML and build a simple web page',
-        priority: 1
-    },
-    {
-        id: id(),
-        title: 'Learn CSS',
-        completed: false,
-        description: 'Learn CSS and style your web page',
-        priority: 2
-    },
-    {
-        id: id(),
-        title: 'Learn JavaScript',
-        completed: false,
-        description: 'Learn JavaScript and make your web page interactive',
-        priority: 3
-    },
-    {
-        id: id(),
-        title: 'Learn React',
-        completed: false,
-        description: 'Learn React and build a todo app',
-        priority: 1
-    }
+    // {
+    //     id: id(),
+    //     title: 'Learn HTML',
+    //     completed: false,
+    //     description: 'Learn HTML and build a simple web page',
+    //     priority: 1
+    // },
+    // {
+    //     id: id(),
+    //     title: 'Learn CSS',
+    //     completed: false,
+    //     description: 'Learn CSS and style your web page',
+    //     priority: 2
+    // },
+    // {
+    //     id: id(),
+    //     title: 'Learn JavaScript',
+    //     completed: false,
+    //     description: 'Learn JavaScript and make your web page interactive',
+    //     priority: 3
+    // },
+    // {
+    //     id: id(),
+    //     title: 'Learn React',
+    //     completed: false,
+    //     description: 'Learn React and build a todo app',
+    //     priority: 1
+    // }
 ]
 
 function App() {
@@ -70,13 +70,12 @@ function App() {
 
     // Function to toggle the completed status of a todo
     function toggleCompleted(idParam) {
-        setTodos((prevTodos) =>
-            prevTodos.map((todo) => {
+        setTodos( todos.map((todo) => {
                 const {id, completed} = todo;
                 if (id === idParam) {
                     return {
                         ...todo,
-                        completed: !completed,
+                        completed: !completed
                     };
                 }
                 return todo;
