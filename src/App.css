@@ -38,12 +38,16 @@ input[type="text"] {
     margin: 0 10px 0 40px;
 }
 
-.btn-delete,
+.btn,
 .todo-item div:last-child span {
     padding: 0.1rem 0.5rem;
     background-color: transparent;
     display: flex;
     align-items: center;
+}
+
+.btn-secondary {
+
 }
 
 .btn-sort {
