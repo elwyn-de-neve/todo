@@ -40,4 +40,10 @@ In deze opdracht gaan we een Todo App bouwen met behulp van React. De app zal ee
 
 11. Maak een functionele component aan voor het weergeven van een taak. Deze component neemt een todo object als parameter en geeft een li element weer met een checkbox, een span element en een button. Gebruik destructuring om de id, titel, voltooide en prioriteit waarden uit het todo object te halen. Gebruik deze component in de App component om de taken weer te geven.
 
-12. Make it pretty! Stijl je app met behulp van CSS. Gebruik hiervoor een CSS bestand en importeer deze in je App component.
+12. **Routing:** geef de applicatie drie pagina's op verschillende url's:
+    * De home-pagina met alle todo's erop;
+    * Een "about me"-pagina met informatie over jou als ontwikkelaar;
+    * Een todo-detail-pagina waarop uiteindelijk alle detailinformatie van één todo wordt weergegeven. Dit moet een _dynamic route_ zijn;
+    Houdt er rekening mee dat we - behalve de unieke identifier - nog geen detail-informatie over een todo kunnen weergeven op de detailpagina, hier hebben we een backend voor nodig. Wel richt je de detailpagina alvast in met dummy-data en zorg je er met state voor dat de gebruiker kan togglen tussen 'weergeven' en 'bewerken', waarin er invoervelden verschijnen.
+
+13. Make it pretty! Stijl je app met behulp van CSS. Gebruik hiervoor een CSS bestand en importeer deze in je App component.
