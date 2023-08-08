@@ -3,10 +3,53 @@ h1 {
     margin-bottom: 20px;
 }
 
+.tab-section {
+    width: 400px;
+    margin: 0 10px 0 40px;
+}
+
 .form {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+}
+
+.form-edit-mode {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    gap: 16px;
+}
+
+.form-read-mode label {
+    font-weight: 600;
+    display: block;
+}
+
+.form-read-mode input[type="text"]:disabled,
+.form-read-mode input[type="date"]:disabled,
+.form-read-mode input[type="checkbox"]:disabled,
+.form-read-mode select:disabled {
+    border: 1px solid transparent;
+    cursor: default;
+    background-color: transparent;
+    line-height: 1.5;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: inherit;
+    margin: 0;
+}
+
+.form-read-mode select:disabled {
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none;
+}
+
+.detail-header-container {
+    display: flex;
+    align-items: center;
 }
 
 .todo-item {
@@ -26,6 +69,8 @@ h1 {
 }
 
 input[type="text"],
+input[type="date"],
+input[type="checkbox"],
 select {
     padding: 0.6rem 1.2rem;
     margin-right: 10px;
@@ -47,7 +92,10 @@ input[type="text"] {
 }
 
 .btn-secondary {
+}
 
+.btn-tertiary {
+    color: #535bf2;
 }
 
 .btn-sort {

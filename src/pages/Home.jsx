@@ -1,19 +1,46 @@
 import {ArrowDown, ArrowUp} from "@phosphor-icons/react";
 import TodoItem from "../components/TodoItem/TodoItem.jsx";
 import {v4 as id} from "uuid";
+import {useState} from "react";
 
-function Home({
-                  todos,
-                  setTodos,
-                  inputValue,
-                  setInputValue,
-                  priority,
-                  setPriority,
-                  completed,
-                  setCompleted,
-                  sorted,
-                  setSorted
-              }) {
+const tasks = [
+    {
+        id: id(),
+        title: 'Learn HTML',
+        completed: false,
+        description: 'Learn HTML and build a simple web page',
+        priority: 1
+    },
+    {
+        id: id(),
+        title: 'Learn CSS',
+        completed: false,
+        description: 'Learn CSS and style your web page',
+        priority: 2
+    },
+    {
+        id: id(),
+        title: 'Learn JavaScript',
+        completed: false,
+        description: 'Learn JavaScript and make your web page interactive',
+        priority: 3
+    },
+    {
+        id: id(),
+        title: 'Learn React',
+        completed: false,
+        description: 'Learn React and build a todo app',
+        priority: 1
+    }
+]
+
+function Home() {
+    // Define state variables using the useState hook
+    const [todos, setTodos] = useState(tasks); // Array of todos
+    const [inputValue, setInputValue] = useState(""); // Input value for adding new todos
+    const [priority, setPriority] = useState(3); // Priority value for adding new todos
+    const [completed, setCompleted] = useState(false); // Completed value for adding new todos
+    const [sorted, setSorted] = useState(true); // Sorted value for toggling priority buttons
 
     // Function to add a new todo
     function addTodo(e) {

@@ -1,9 +1,12 @@
 import Button from "../Button/Button.jsx";
 import {Link, Trash} from "@phosphor-icons/react";
 import FlagIcon from "../FlagIcon/FlagIcon.jsx";
+import {useNavigate} from "react-router-dom";
 
 function TodoItem({todo, todos, setTodos }) {
     const {id, title, completed, priority} = todo;
+
+    const navigate = useNavigate();
 
     // Function to delete a todo
     function deleteTask(id) {
@@ -27,7 +30,7 @@ function TodoItem({todo, todos, setTodos }) {
     }
 
     return (
-        <li key={id} className="todo-item">
+        <li key={id} className="todo-item" >
             <div>
                 <input type="checkbox"
                        checked={completed}
@@ -39,7 +42,7 @@ function TodoItem({todo, todos, setTodos }) {
                 <Button
                     type="button"
                     variant="secondary"
-                    onClick={()=> console.log('Straks naar een andere pagina navigeren')}>
+                    onClick={() => navigate(`/todo/${id}`)}>
                     <Link size={16}/>
                 </Button>
                 <FlagIcon priority={priority}/>

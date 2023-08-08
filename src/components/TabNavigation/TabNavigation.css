@@ -1,0 +1,17 @@
+nav {
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.active-menu-link {
+    border-bottom: 1px solid var(--color-blue);
+}
+
+.default-menu-link {
+
+}
