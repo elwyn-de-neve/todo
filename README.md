@@ -46,6 +46,6 @@ In deze opdracht gaan we een Todo App bouwen met behulp van React. De app zal ee
     * Een todo-detail-pagina waarop uiteindelijk alle detailinformatie van één todo wordt weergegeven. Dit moet een _dynamic route_ zijn;
     Houdt er rekening mee dat we - behalve de unieke identifier - nog geen detail-informatie over een todo kunnen weergeven op de detailpagina, hier hebben we een backend voor nodig. Wel richt je de detailpagina alvast in met dummy-data en zorg je er met state voor dat de gebruiker kan togglen tussen 'weergeven' en 'bewerken', waarin er invoervelden verschijnen.
 
-13. Maak er ook een mooie menubalk bij!
+13. **Routing:** Maak er ook een mooie menubalk bij!
 
 14. Make it pretty! Stijl je app met behulp van CSS. Gebruik hiervoor een CSS bestand en importeer deze in je App component.
