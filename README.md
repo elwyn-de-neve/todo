@@ -47,5 +47,19 @@ In deze opdracht gaan we een Todo App bouwen met behulp van React. De app zal ee
     Houdt er rekening mee dat we - behalve de unieke identifier - nog geen detail-informatie over een todo kunnen weergeven op de detailpagina, hier hebben we een backend voor nodig. Wel richt je de detailpagina alvast in met dummy-data en zorg je er met state voor dat de gebruiker kan togglen tussen 'weergeven' en 'bewerken', waarin er invoervelden verschijnen.
 
 13. **Routing:** Maak er ook een mooie menubalk bij!
+    
+#### Requests maken - deel 1
 
-14. Make it pretty! Stijl je app met behulp van CSS. Gebruik hiervoor een CSS bestand en importeer deze in je App component.
+14. Tijd voor een backend! Clone de [fake backend](https://github.com/hogeschoolnovi/frontend-fake-database/tree/main) naar jouw eigen computer en start deze op volgens de instructies. Lees de documentatie goed door, zodat je weet welke endpoints er beschikbaar zijn. Op basis van de volgende opdrachten zul je namelijk zelf moeten bedenken waar het request naartoe moet. *Dikke tip:* begin een nieuw, schoon frontend projectje zodat je onbezorgd kunt oefenen met de requests, voordat je dit implementeert in je bestaande to-do applicatie. Scheelt een hoop kopzorgen!
+15. **To-do's ophalen**: maak een tijdelijke button (`haal taken op`) zodat je daar jouw asynchrone functie aan kunt koppelen. Maak een request naar de backend om *alle* to-do's op te halen en log deze in de console;
+16. **Nieuwe to-do toevoegen:** maak nog een button (`nieuwe toevoegen`) en zorg ervoor dat er een nieuwe todo wordt toegevoegd aan de database wanneer de gebruiker hierop klikt. Dit mag je voor nu doen met hardcoded-tekst. Zorg er wel voor dat de`id` en de `created`-datum gegenereerd worden en er een succesmelding in de console wordt gelogd;
+17. Check, check, dubbelcheck: als je nu opnieuw alle todo's ophaalt door op de `haal taken op`-knop te klikken, staat jouw toegevoegde to-do daar nu bij? :heart_eyes:
+18. **To-do verwijderen**: maak een button (`verwijder eerste todo`) en gebruik de `id` van de *eerste* to-do om deze uit de backend te verwijderen. Deze `id` mag je gewoon even overtypen. Zorg ervoor dat er bij success een melding in de console wordt gelogd;
+19.  **To do aanpassen:** kies een to-do waarvan je de beschrijving wil wijzigen en gebruik daar de `id` van om een wijzig-request te maken. Let erop dat je alle huidige informatie van de to-do meestuurt - ook de velden die niet worden aangepast! -  anders verlies je gegevens. Controleer of de wijziging gelukt is door daarna weer op de `haal taken op`-knop te klikken.
+
+#### Requests maken - deel 2
+Tijd voor de implementatie in jouw app! 
+
+_Coming soon!_
+
+20. Make it pretty! Stijl je app met behulp van CSS. Gebruik hiervoor een CSS bestand en importeer deze in je App component.
