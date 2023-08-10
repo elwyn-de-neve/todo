@@ -58,8 +58,31 @@ In deze opdracht gaan we een Todo App bouwen met behulp van React. De app zal ee
 19.  **To do aanpassen:** kies een to-do waarvan je de beschrijving wil wijzigen en gebruik daar de `id` van om een wijzig-request te maken. Let erop dat je alle huidige informatie van de to-do meestuurt - ook de velden die niet worden aangepast! -  anders verlies je gegevens. Controleer of de wijziging gelukt is door daarna weer op de `haal taken op`-knop te klikken.
 
 #### Requests maken - deel 2
-Tijd voor de implementatie in jouw app! 
 
-_Coming soon!_
+20. Tijd voor de implementatie in jouw app! We willen op de todo-pagina natuurlijk direct beginnen met het ophalen en weergeven van alle to-do's. Om dit mogelijk te maken *zonder* eerst op een knopje te drukken, zul je het request moeten **maken en aanroepen** binnen een effect-hook*:
+
+```jsx
+function JouwPagina() {
+  useEffect(() => {
+    async function fetchAllTodos() {
+      //.. haal de taken op en zet ze in de state!
+    }
+    
+    fetchAllTodos();
+  }, []);
+}
+```
+
+​	Wanneer je de gegevens in de state hebt gezet, kun je de todo's weergeven op de pagina.
+
+21. Op dit moment verloopt het toevoegen van een nieuwe to-do enkel via de State. Breidt de huidige logica daarom uit, door de nieuwe todo eerst naar de backend te sturen. Pas als de backend laat weten dat de nieuwe todo succesvol is toegevoegd, zet je deze in de State. *Leuk nieuws:* als je nu de pagina zou verversen, blijft ook de nieuwe to-do staan! Wuhuuu!
+22. Ook het verwijderen van een to-do verloopt nog niet via de backend. Zorg ervoor dat wanneer de gebruiker één van de todos wil verwijderen, je *eerst* een verzoek maakt naar de backend. Als het verwijderen succesvol was, mag de todo ook uit de state verwijderd worden zodat de gebruiker ziet dat het gelukt is.
+23. Wanneer de gebruiker naar de detailpagina van een todo navigeert, is deze pagina verantwoordelijk voor het weergeven van de detail-informatie, op basis van de url. Tot nu toe geven we alleen de `id` weer, maar daar gaan we nu verandering in brengen! Zorg ervoor dat de detail-pagina alle informatie over de aangeklikte todo ophaalt en weergeeft op de pagina. *Let op:* ook dit moet weer in een effect-hook.
+24. Weergeven is leuk, maar we willen de gebruiker ook de kans geven de gegevens aan te passen. Wanneer de gebruiker op 'wijzigen' drukt en één (of meerdere) velden heeft aangepast, moet dit wijzigingsverzoek naar de backend worden verzonden.
+25. Wanneer de gebruiker na het maken van aanpassingen in het formulier toch van gedachten veranderd, moet er een annuleer-mogelijkheid bestaan. Annuleren zorgt ervoor dat er geen request naar de backend gestuurd wordt. Het formulier moet dan weer worden teruggezet naar de originele waardes. 
+26. Ook het afstrepen van een taak moet via de backend verlopen. Zorg ervoor dat wanneer een gebruiker diens taak afstreept in het overzicht, er eerst een wijzigingsverzoek naar de backend wordt verstuurd. Wanneer je de pagina na het afstrepen van een taak ververst, zou de taak nog steeds afgestreept moeten zijn.
+27. **Bonus:** plaats alle informatie die op de About-pagina moet komen te staan in JSON-format in de backend (behalve de afbeeldingen). Op deze manier kun je de content voor deze pagina ophalen via een request, alvorens dit wordt weergegeven op de pagina!
+
+*Hoe effect-hooks in React precies werken, zullen we niet behandelen. Als je toch erg nieuwschierig bent, kun je altijd hoofdstuk 9 op EdHub doorlezen!
 
 20. Make it pretty! Stijl je app met behulp van CSS. Gebruik hiervoor een CSS bestand en importeer deze in je App component.
