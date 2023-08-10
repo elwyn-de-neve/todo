@@ -89,4 +89,4 @@ function JouwPagina() {
 
 *Hoe effect-hooks in React precies werken, zullen we niet behandelen. Je mag voor nu simpelweg aannemen dat dit nodig is om niet in een never-ending-loop terecht te komen. Als je toch erg nieuwschierig bent naar effect-hooks en life cycles, kun je altijd hoofdstuk 9 op EdHub doorlezen!
 
-20. Make it pretty! Stijl je app met behulp van CSS. Gebruik hiervoor een CSS bestand en importeer deze in je App component.
+20. Make it pretty! 💅
