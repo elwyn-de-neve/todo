@@ -70,6 +70,10 @@ function JouwPagina() {
     
     fetchAllTodos();
   }, []);
+
+  return (
+    <></>
+  ); 
 }
 ```
 
